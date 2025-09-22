@@ -15,6 +15,30 @@ export const HeaderPro = () => (
   />
 );
 
+export const HeaderUser = () => (
+  <Layout
+    rowTop={{
+      center: "Музей процессоров",
+    }}
+    rowCenter={{
+      left: <ButtonGroup />,
+      center: <SearchGroup />,
+    }}
+  />
+);
+
+export const HeaderNoSearch = () => (
+  <Layout
+    rowTop={{
+      center: "Музей процессоров",
+    }}
+    rowCenter={{
+      left: <ButtonGroup />,
+      right: <RightGroup />,
+    }}
+  />
+);
+
 const ButtonGroup = () => (
   <div style={{ display: "flex", gap: "10px" }}>
     <Button label="Процессоры" view="clear" />
