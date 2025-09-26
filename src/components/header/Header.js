@@ -35,7 +35,7 @@ export function HeaderPro() {
     <div style={{ width: "100vw" }}>
       <div
         style={{
-          backgroundColor: "var(--color-bg-success)",
+          backgroundColor: "var(--color-bg-normal)",
           padding: "8px 16px",
           display: "flex",
           alignItems: "center",
@@ -109,30 +109,30 @@ export const HeaderNoSearch = () => (
 
 const ButtonGroup = () => (
   <div style={{ display: "flex", gap: "10px" }}>
-    <Button label="Процессоры" view="ghost" />
-    <Button label="Материнские платы" view="ghost" />
-    <Button label="Хранилки" view="ghost" />
+    <Button label="Процессоры" view="ghost" form="brick" />
+    <Button label="Материнские платы" view="ghost" form="brick" />
+    <Button label="Хранилки" view="ghost" form="brick" />
   </div>
 );
 
 const SearchGroup = () => (
   <div style={{ display: "flex", gap: "5px" }}>
     <AutoCompleteExampleItems value="Поиск" />
-    <Button label="Найти" form="default" size="s" view="ghost" />
+    <Button label="Найти" form="default" size="s" view="ghost" form="brick" />
   </div>
 );
 
 const RightGroupUser = () => (
   <div style={{ display: "flex", gap: "10px" }}>
-    <Button label="" view="clear" />
+    <Button label="" view="clear" form="brick" />
   </div>
 );
 
 const RightGroupPro = () => (
   <div style={{ display: "flex", gap: "10px" }}>
-    <Button label="Импорт CSV" view="ghost" size="s" />
-    <Button label="Импорт фото" view="ghost" size="s" />
-    <Button label="Скачать таблицу" view="ghost" size="s" />
-    <Button label="Выйти" view="ghost" size="s" />
+    <Button label="Импорт CSV" view="ghost" size="s" form="brick" />
+    <Button label="Импорт фото" view="ghost" size="s" form="brick" />
+    <Button label="Скачать таблицу" view="ghost" size="s" form="brick" />
+    <Button label="Выйти" view="ghost" size="s" form="brick" />
   </div>
 );

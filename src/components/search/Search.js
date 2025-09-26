@@ -9,6 +9,7 @@ export const AutoCompleteExampleItems = () => {
   return (
     <AutoComplete
       type="text"
+      form="brick"
       placeholder="Введите значение"
       value={value}
       items={basicItems}

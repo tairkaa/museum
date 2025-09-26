@@ -61,7 +61,7 @@ export const FilterManufacturer = () => {
           getItemLabel={getItemLabel}
           onItemClick={onItemClick}
           size="s"
-          form="default"
+          form="brick"
         />
       </div>
     </div>

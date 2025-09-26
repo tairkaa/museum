@@ -1,0 +1,10 @@
+.statisticsContainer {
+  display: flex;
+  width: 100%;
+}
+
+.statisticsItem {
+  flex: 1;
+  border: 1px solid var(--color-bg-border);
+  padding: 20px;
+}

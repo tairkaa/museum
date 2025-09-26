@@ -125,7 +125,7 @@ export const FilterFamily = () => {
           getItemSubMenu={getItemSubMenu}
           onItemClick={onItemClick}
           size="s"
-          form="default"
+          form="brick"
         />
       </div>
     </div>

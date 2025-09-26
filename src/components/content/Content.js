@@ -27,6 +27,7 @@ export const Content = () => {
             label="Показать отсутствующие"
             width="default"
             view="secondary"
+            form="brick"
           />
         </div>
       </Layout>
