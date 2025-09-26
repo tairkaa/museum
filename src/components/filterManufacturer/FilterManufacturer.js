@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "@consta/header/Navbar";
+import { Text } from "@consta/uikit/Text";
 
 export const FilterManufacturer = () => {
   const [selectedManufacturer, setSelectedManufacturer] = useState(null);
@@ -12,30 +13,57 @@ export const FilterManufacturer = () => {
     { label: "Motorola", value: "motorola", groupId: "manufacturers" },
   ];
 
-  const groups = [{ id: "manufacturers", label: "Производители" }];
-
   const getItemLabel = (item) => item.label;
-  const getItemGroupId = (item) => item.groupId;
-  const getGroupKey = (group) => group.id;
-  const getGroupLabel = (group) => group.label;
+
   const onItemClick = (item) => {
     setSelectedManufacturer(item);
     console.log("Выбран производитель:", item.label);
   };
 
   return (
-    <div style={{ width: "100%" }}>
-      <Navbar
-        items={manufacturers}
-        groups={groups}
-        getItemLabel={getItemLabel}
-        getItemGroupId={getItemGroupId}
-        getGroupKey={getGroupKey}
-        getGroupLabel={getGroupLabel}
-        onItemClick={onItemClick}
-        size="s"
-        form="default"
-      />
+    <div
+      style={{
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          padding: "10px",
+          backgroundColor: "var(--color-bg-system)",
+          borderBottom: "1px solid var(--color-bg-border)",
+          flexShrink: 0,
+        }}
+      >
+        <Text
+          size="xs"
+          view="primary"
+          style={{
+            color: "var(--color-control-typo-clear)",
+          }}
+        >
+          ПРОИЗВОДИТЕЛИ
+        </Text>
+      </div>
+
+      <div
+        style={{
+          flex: 1,
+          overflow: "auto",
+          padding: "10px",
+        }}
+      >
+        <Navbar
+          items={manufacturers}
+          groups={[]}
+          getItemLabel={getItemLabel}
+          onItemClick={onItemClick}
+          size="s"
+          form="default"
+        />
+      </div>
     </div>
   );
 };

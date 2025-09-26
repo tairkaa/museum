@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Navbar } from "@consta/header/Navbar";
+import { Text } from "@consta/uikit/Text";
+
+import React from "react";
 
 export const FilterFamily = () => {
   const [selectedFamily, setSelectedFamily] = useState(null);
@@ -71,13 +74,8 @@ export const FilterFamily = () => {
     },
   ];
 
-  const groups = [{ id: "families", label: "Семейства" }];
-
   const getItemLabel = (item) => item.label;
-  const getItemGroupId = (item) => item.groupId;
   const getItemSubMenu = (item) => item.subMenu;
-  const getGroupKey = (group) => group.id;
-  const getGroupLabel = (group) => group.label;
   const onItemClick = (item) => {
     if (item.value) {
       setSelectedFamily(item);
@@ -86,19 +84,50 @@ export const FilterFamily = () => {
   };
 
   return (
-    <div style={{ width: "100%" }}>
-      <Navbar
-        items={families}
-        groups={groups}
-        getItemLabel={getItemLabel}
-        getItemGroupId={getItemGroupId}
-        getItemSubMenu={getItemSubMenu}
-        getGroupKey={getGroupKey}
-        getGroupLabel={getGroupLabel}
-        onItemClick={onItemClick}
-        size="s"
-        form="default"
-      />
+    <div
+      style={{
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          padding: "10px",
+          backgroundColor: "var(--color-bg-secondary)",
+          borderBottom: "1px solid var(--color-bg-border)",
+          flexShrink: 0,
+        }}
+      >
+        <Text
+          size="xs"
+          view="primary"
+          style={{
+            color: "var(--color-control-typo-clear)",
+          }}
+        >
+          СЕМЕЙСТВА
+        </Text>
+      </div>
+
+      <div
+        style={{
+          flex: 1,
+          overflow: "auto",
+          padding: "10px",
+        }}
+      >
+        <Navbar
+          items={families}
+          groups={[]}
+          getItemLabel={getItemLabel}
+          getItemSubMenu={getItemSubMenu}
+          onItemClick={onItemClick}
+          size="s"
+          form="default"
+        />
+      </div>
     </div>
   );
 };

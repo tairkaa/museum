@@ -1119,6 +1119,11 @@
   resolved "https://registry.yarnpkg.com/@bem-react/classnames/-/classnames-1.4.0.tgz#2eb1728305ad308fe10a6d9779fc4e3a5f794027"
   integrity sha512-nPjAkqp3TUZmHrGOt6io/a7jPt6/9lIA21QbiRicyCmCcg41vBFs25wu7RdI+MIiI9VaiXhKnzobL9qbqUTyjw==
 
+"@consta/ag-grid-adapter@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@consta/ag-grid-adapter/-/ag-grid-adapter-4.0.0.tgz#8a68d10f768abb1a23dc8e13f0cca8276343cfe1"
+  integrity sha512-aEd9KbhOSYN5ivkqpVeaSlZ4kAjRdPDakO/3x7VFBPjYTwGTvgCkdPesKWvml5y08tkaI7qe79z8Rv8aP5yJNg==
+
 "@consta/header@^3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@consta/header/-/header-3.0.2.tgz#6b251bf03574171748f5f7294d3429110e7e3fff"
