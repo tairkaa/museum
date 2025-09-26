@@ -13,7 +13,7 @@ export function MainPage() {
 
   return (
     <Layout direction="column" style={{ height: "100vh" }}>
-      <Layout>
+      <Layout style={{ width: "100vw" }}>
         {headerType === "HeaderPro" && <HeaderPro />}
         {headerType === "HeaderUser" && <HeaderUser />}
         {headerType === "HeaderNoSearch" && <HeaderNoSearch />}

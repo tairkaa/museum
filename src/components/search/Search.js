@@ -15,6 +15,7 @@ export const AutoCompleteExampleItems = () => {
       getItemKey={(item) => item}
       getItemLabel={(item) => item}
       onChange={setValue}
+      size="s"
     />
   );
 };
