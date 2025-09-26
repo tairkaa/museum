@@ -9,12 +9,14 @@ export const AutoCompleteExampleItems = () => {
   return (
     <AutoComplete
       type="text"
+      form="brick"
       placeholder="Введите значение"
       value={value}
       items={basicItems}
       getItemKey={(item) => item}
       getItemLabel={(item) => item}
       onChange={setValue}
+      size="s"
     />
   );
 };

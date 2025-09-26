@@ -1,10 +1,30 @@
 import { Layout } from "@consta/header/Layout";
 import { Button } from "@consta/uikit/Button";
 import { AutoCompleteExampleItems } from "../search/Search.js";
-import { useState } from "react";
 import "./Header.css";
 import { Text } from "@consta/uikit/Text";
 import { Picture } from "@consta/uikit/Picture";
+
+import React, { useState } from "react";
+import { Tabs } from "@consta/uikit/Tabs";
+
+const items = ["Процессоры", "Материнские платы", "Устройства хранения"];
+
+const getItemLabel = (label) => label;
+
+export const TabsExample = () => {
+  const [value, setValue] = useState(items[0]);
+  return (
+    <Tabs
+      value={value}
+      onChange={setValue}
+      items={items}
+      getItemLabel={getItemLabel}
+      view="primary"
+      size="s"
+    />
+  );
+};
 
 export function HeaderPro() {
   const [now, setNow] = useState(new Date());
@@ -12,18 +32,53 @@ export function HeaderPro() {
   setInterval(() => setNow(new Date()), 1000);
 
   return (
-    <Layout
-      rowTop={{
-        center: (
-          <HeaderTop something={`| Admin | ${now.toLocaleTimeString()}`} />
-        ),
-      }}
-      rowCenter={{
-        left: <ButtonGroup />,
-        center: <SearchGroup />,
-        right: <RightGroupPro />,
-      }}
-    />
+    <div style={{ width: "100vw" }}>
+      <div
+        style={{
+          backgroundColor: "var(--color-bg-normal)",
+          padding: "8px 16px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "10px",
+        }}
+      >
+        <Picture
+          src="/auteam-logo.svg"
+          alt="auteam-logo"
+          style={{ width: "20px", height: "20px" }}
+        />
+        <Picture
+          src="/gubkin-logo.svg"
+          alt="auteam-logo"
+          style={{ width: "20px", height: "20px" }}
+        />
+        <Text size="xs" view="primary" style={{ color: "white" }}>
+          Музей компьютеров и вычислительной техники РГУ нефти и газа (НИУ)
+          имени И.М. Губкина | Admin |
+        </Text>
+        <Text
+          size="xs"
+          view="primary"
+          style={{
+            color: "white",
+            fontFamily: "monospace",
+            minWidth: "80px",
+            textAlign: "left",
+          }}
+        >
+          {now.toLocaleTimeString()}
+        </Text>
+      </div>
+
+      <Layout
+        rowCenter={{
+          left: <TabsExample />,
+          center: <SearchGroup />,
+          right: <RightGroupPro />,
+        }}
+      />
+    </div>
   );
 }
 
@@ -43,7 +98,7 @@ export const HeaderUser = () => (
 export const HeaderNoSearch = () => (
   <Layout
     rowTop={{
-      center: <HeaderTop />,
+      center: "Музей процессоров",
     }}
     rowCenter={{
       left: <ButtonGroup />,
@@ -54,52 +109,30 @@ export const HeaderNoSearch = () => (
 
 const ButtonGroup = () => (
   <div style={{ display: "flex", gap: "10px" }}>
-    <Button label="Процессоры" view="ghost" />
-    <Button label="Материнские платы" view="ghost" />
-    <Button label="Хранилки" view="ghost" />
+    <Button label="Процессоры" view="ghost" form="brick" />
+    <Button label="Материнские платы" view="ghost" form="brick" />
+    <Button label="Хранилки" view="ghost" form="brick" />
   </div>
 );
 
 const SearchGroup = () => (
   <div style={{ display: "flex", gap: "5px" }}>
     <AutoCompleteExampleItems value="Поиск" />
-    <Button label="Найти" form="default" />
+    <Button label="Найти" form="default" size="s" view="ghost" form="brick" />
   </div>
 );
 
 const RightGroupUser = () => (
   <div style={{ display: "flex", gap: "10px" }}>
-    <Button label="" view="clear" />
+    <Button label="" view="clear" form="brick" />
   </div>
 );
 
 const RightGroupPro = () => (
   <div style={{ display: "flex", gap: "10px" }}>
-    <Button label="Импорт CSV" view="clear" />
-    <Button label="Импорт фото" view="clear" />
-    <Button label="Скачать таблицу" view="clear" />
-    <Button label="Выйти" view="clear" />
-  </div>
-);
-
-const HeaderTop = (props) => (
-  <div
-    style={{
-      display: "flex",
-      gap: "10px",
-      alignItems: "center",
-      width: "100%",
-      height: "100%",
-      justifyContent: "center",
-    }}
-  >
-    <Picture
-      src="/auteam-logo-color.svg"
-      alt="auteam-logo"
-      style={{ width: "20px", height: "20px" }}
-    />
-    <Text size="xs" view="primary">
-      Музей процессоров {props.something}
-    </Text>
+    <Button label="Импорт CSV" view="ghost" size="s" form="brick" />
+    <Button label="Импорт фото" view="ghost" size="s" form="brick" />
+    <Button label="Скачать таблицу" view="ghost" size="s" form="brick" />
+    <Button label="Выйти" view="ghost" size="s" form="brick" />
   </div>
 );

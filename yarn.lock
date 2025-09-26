@@ -1139,6 +1139,18 @@
   resolved "https://registry.yarnpkg.com/@consta/uikit/-/uikit-5.25.1.tgz#ecbab263ccec7f8e28c5ddb827335d91fcd590be"
   integrity sha512-FYiDYKT62XKerdDyjhQqJ0wStuS8r1UkVT5ptdZiwqR136MFqByiQei1adFrwfjvZ0qjTLtSm3sVr28cgzOb3g==
 
+"@consta/widgets-utils@^0.2.15":
+  version "0.2.15"
+  resolved "https://registry.yarnpkg.com/@consta/widgets-utils/-/widgets-utils-0.2.15.tgz#e742d0f7e00d38aef3cfffdc7a3e04a3cd3b77c1"
+  integrity sha512-twidkF30eQ5Nigb45DJ2eb4zQVcxBQrNjgLiWJzss2Wn/b4jEYQU3aOV0PtuQ4aATVkcikFi/qBbXEHeOLfI8w==
+
+"@consta/widgets@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@consta/widgets/-/widgets-5.0.0.tgz#9fd13afa425f0cc2601ff1e054c952de3b9af73a"
+  integrity sha512-HHqW5IjW5KZoC1rOGomuFEntXwJZsByBgvaGm67qgWbgVPYa6VkaC4wDosAHSmEXIb3NNt+hkak+xXuwZ46MNg==
+  dependencies:
+    "@consta/widgets-utils" "^0.2.15"
+
 "@csstools/normalize.css@*":
   version "12.1.1"
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-12.1.1.tgz#f0ad221b7280f3fc814689786fd9ee092776ef8f"

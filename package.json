@@ -9,6 +9,7 @@
     "@consta/header": "^3.0.2",
     "@consta/icons": "^1.2.0",
     "@consta/uikit": "^5.25.1",
+    "@consta/widgets": "^5.0.0",
     "@reatom/core": "^3.10.1",
     "@reatom/npm-react": "^3.10.6",
     "@testing-library/dom": "^10.4.0",

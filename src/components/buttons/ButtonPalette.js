@@ -14,13 +14,16 @@ export const ButtonPalette = () => {
   return (
     <>
       <Button
+        view="secondary"
         size="s"
         ref={ref}
         label="Выбрать палетку"
         iconLeft={IconList}
         onClick={() => setIsOpen(!isOpen)}
+        form="brick"
       />
       <ContextMenu
+        form="brick"
         isOpen={isOpen}
         items={items}
         anchorRef={ref}

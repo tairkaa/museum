@@ -24,7 +24,7 @@ export const CpuCard = () => {
   };
 
   return (
-    <Card verticalSpace="0" horizontalSpace="0">
+    <Card verticalSpace="0" horizontalSpace="0" form="brick">
       <CpuCardHeader
         name={cpuData.name}
         manufacturer={cpuData.manufacturer}
@@ -46,7 +46,13 @@ export const CpuCard = () => {
 
 const CpuCardHeader = ({ name, manufacturer, status }) => (
   <div className="cpuCardHeader">
-    <Badge label="Работает" status={status} size="s" view="filled" />
+    <Badge
+      label="Работает"
+      status={status}
+      size="s"
+      view="filled"
+      form="brick"
+    />
     <Text size="l" weight="bold" view="primary">
       {name}
     </Text>
