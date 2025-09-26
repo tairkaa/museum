@@ -5,6 +5,7 @@
   "dependencies": {
     "@bem-react/classname": "^1.7.0",
     "@bem-react/classnames": "^1.4.0",
+    "@consta/ag-grid-adapter": "^4.0.0",
     "@consta/header": "^3.0.2",
     "@consta/icons": "^1.2.0",
     "@consta/uikit": "^5.25.1",
