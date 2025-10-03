@@ -7,6 +7,7 @@ import { Picture } from "@consta/uikit/Picture";
 
 import React, { useState } from "react";
 import { Tabs } from "@consta/uikit/Tabs";
+import { IconSun } from "@consta/icons/IconSun";
 
 const items = ["Процессоры", "Материнские платы", "Устройства хранения"];
 
@@ -26,7 +27,7 @@ export const TabsExample = () => {
   );
 };
 
-export function HeaderPro() {
+export function HeaderPro({ onToggleTheme, currentTheme }) {
   const [now, setNow] = useState(new Date());
 
   setInterval(() => setNow(new Date()), 1000);
@@ -69,6 +70,15 @@ export function HeaderPro() {
         >
           {now.toLocaleTimeString()}
         </Text>
+        <Button
+          size="s"
+          view="clear"
+          onlyIcon="true"
+          iconRight={IconSun}
+          form="brick"
+          label={`Тема: ${currentTheme}`}
+          onClick={onToggleTheme}
+        />
       </div>
 
       <Layout

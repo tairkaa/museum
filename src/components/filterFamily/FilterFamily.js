@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Navbar } from "@consta/header/Navbar";
 import { Text } from "@consta/uikit/Text";
-
+import "./FilterFamily.css";
 import React from "react";
 
 export const FilterFamily = () => {
@@ -84,40 +84,14 @@ export const FilterFamily = () => {
   };
 
   return (
-    <div
-      style={{
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        overflow: "hidden",
-      }}
-    >
-      <div
-        style={{
-          padding: "10px",
-          backgroundColor: "var(--color-bg-secondary)",
-          borderBottom: "1px solid var(--color-bg-border)",
-          flexShrink: 0,
-        }}
-      >
-        <Text
-          size="xs"
-          view="primary"
-          style={{
-            color: "var(--color-control-typo-clear)",
-          }}
-        >
+    <div className="mainFilterFamilyBlock">
+      <div className="familyFilterHeader">
+        <Text size="xs" view="secondary">
           СЕМЕЙСТВА
         </Text>
       </div>
 
-      <div
-        style={{
-          flex: 1,
-          overflow: "auto",
-          padding: "10px",
-        }}
-      >
+      <div className="familyFilterContent">
         <Navbar
           items={families}
           groups={[]}

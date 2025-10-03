@@ -28,7 +28,7 @@
   object-fit: contain;
   border-radius: 0;
   border: 1px solid var(--color-bg-border);
-  background-color: #f5f5f5;
+  background-color: var(--color-bg-default);
 }
 
 .previewPictures {
@@ -37,6 +37,7 @@
 }
 
 .previewPicture {
+  background-color: var(--color-bg-default);
   width: 40px;
   height: 40px;
   object-fit: cover;

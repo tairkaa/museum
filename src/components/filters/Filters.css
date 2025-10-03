@@ -1,0 +1,41 @@
+.FilterManufacturerContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background-color: var(--color-bg-system);
+  height: 100%;
+  overflow: hidden;
+  border-right: 1px solid var(--color-bg-border);
+}
+
+.FilterFamilyContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background-color: var(--color-bg-secondary);
+  height: 100%;
+  overflow: hidden;
+  border-right: 1px solid var(--color-bg-border);
+}
+
+.FilterManufacturerContainer::-webkit-scrollbar,
+.FilterFamilyContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.FilterManufacturerContainer::-webkit-scrollbar-track,
+.FilterFamilyContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0px;
+}
+
+.FilterManufacturerContainer::-webkit-scrollbar-thumb,
+.FilterFamilyContainer::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 0px;
+}
+
+.FilterManufacturerContainer::-webkit-scrollbar-thumb:hover,
+.FilterFamilyContainer::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

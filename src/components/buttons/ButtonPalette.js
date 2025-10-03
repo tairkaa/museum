@@ -1,35 +1,25 @@
-import { useState, useRef } from "react";
-import { Button } from "@consta/uikit/Button";
-import { ContextMenu } from "@consta/uikit/ContextMenu";
-import { IconList } from "@consta/icons/IconList";
+import React, { useState } from "react";
+import { Combobox } from "@consta/uikit/Combobox";
+import "./ButtonPalette.css";
 
 export const ButtonPalette = () => {
   const items = [
-    { label: "Пункт 1" },
-    { label: "Пункт 2" },
-    { label: "Пункт 3" },
+    { label: "Первый", id: 1 },
+    { label: "Второй", id: 2 },
+    { label: "Третий", id: 3 },
   ];
-  const [isOpen, setIsOpen] = useState(false);
-  const ref = useRef(null);
+
+  const [value, setValue] = useState(null);
+
   return (
-    <>
-      <Button
-        view="secondary"
-        size="s"
-        ref={ref}
-        label="Выбрать палетку"
-        iconLeft={IconList}
-        onClick={() => setIsOpen(!isOpen)}
-        form="brick"
-      />
-      <ContextMenu
-        form="brick"
-        isOpen={isOpen}
-        items={items}
-        anchorRef={ref}
-        onClickOutside={() => setIsOpen(false)}
-        direction="downStartLeft"
-      />
-    </>
+    <Combobox
+      className="Combobox"
+      placeholder="Выберите палетку"
+      items={items}
+      value={value}
+      onChange={setValue}
+      size="s"
+      form="brick"
+    />
   );
 };

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Navbar } from "@consta/header/Navbar";
 import { Text } from "@consta/uikit/Text";
+import "./FilterManufacturer.css";
 
 export const FilterManufacturer = () => {
   const [selectedManufacturer, setSelectedManufacturer] = useState(null);
@@ -21,40 +22,14 @@ export const FilterManufacturer = () => {
   };
 
   return (
-    <div
-      style={{
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        overflow: "hidden",
-      }}
-    >
-      <div
-        style={{
-          padding: "10px",
-          backgroundColor: "var(--color-bg-system)",
-          borderBottom: "1px solid var(--color-bg-border)",
-          flexShrink: 0,
-        }}
-      >
-        <Text
-          size="xs"
-          view="primary"
-          style={{
-            color: "var(--color-control-typo-clear)",
-          }}
-        >
+    <div className="mainFilterManufacturerBlock">
+      <div className="manufacturerFilterHeader">
+        <Text size="xs" view="secondary">
           ПРОИЗВОДИТЕЛИ
         </Text>
       </div>
 
-      <div
-        style={{
-          flex: 1,
-          overflow: "auto",
-          padding: "10px",
-        }}
-      >
+      <div className="manufacturerFilterContent">
         <Navbar
           items={manufacturers}
           groups={[]}
