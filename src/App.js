@@ -1,13 +1,32 @@
-import "./App.css";
-
-import React from "react";
-import { Theme, presetGpnDefault } from "@consta/uikit/Theme";
+import React, { useState } from "react";
+import {
+  Theme,
+  presetGpnDark,
+  presetGpnDefault,
+  presetGpnDisplay,
+} from "@consta/uikit/Theme";
 import { MainPage } from "./components/mainPage/MainPage";
 
-const App = () => (
-  <Theme style={{ height: "100vh", width: "100vw" }} preset={presetGpnDefault}>
-    <MainPage />
-  </Theme>
-);
+const themes = {
+  display: presetGpnDisplay,
+  dark: presetGpnDark,
+  default: presetGpnDefault,
+};
+
+const App = () => {
+  const [theme, setTheme] = useState("default");
+
+  const toggleTheme = () => {
+    setTheme((prev) =>
+      prev === "display" ? "dark" : prev === "dark" ? "default" : "display"
+    );
+  };
+
+  return (
+    <Theme className="App" preset={themes[theme]}>
+      <MainPage onToggleTheme={toggleTheme} currentTheme={theme} />
+    </Theme>
+  );
+};
 
 export default App;
