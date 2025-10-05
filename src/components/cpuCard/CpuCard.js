@@ -5,9 +5,7 @@ import { Badge } from "@consta/uikit/Badge";
 import { Layout } from "@consta/uikit/Layout";
 import "./cpuCard.css";
 
-export const CpuCard = () => {
-  let guid = "5816B197";
-
+export const CpuCard = ({ guid }) => {
   const cpuData = {
     name: "Intel Core i7-12700K",
     manufacturer: "Intel",

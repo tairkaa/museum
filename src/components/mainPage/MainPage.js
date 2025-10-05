@@ -2,26 +2,32 @@ import { Layout } from "@consta/uikit/Layout";
 import { HeaderPro } from "../header/Header";
 import { Content } from "../content/Content";
 import { useState } from "react";
-import { HeaderUser } from "../header/Header";
-import { HeaderNoSearch } from "../header/Header";
 import { Filters } from "../filters/Filters";
 import "./MainPage.css";
 
 export function MainPage({ onToggleTheme, currentTheme }) {
-  const [headerType, setHeaderType] = useState("HeaderPro");
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [activeTab, setActiveTab] = useState("Процессоры");
+
+  const handleTabChange = (newTab) => {
+    setActiveTab(newTab);
+  };
+
+  const handleToggleAdmin = () => {
+    setIsAdmin(!isAdmin);
+  };
 
   return (
-    <Layout direction="column" style={{ height: "100vh" }}>
+    <Layout direction="column" className="MainPage">
       <Layout>
-        {/* {headerType === "HeaderPro" && <HeaderPro />} */}
-        {headerType === "HeaderPro" && (
-          <HeaderPro
-            onToggleTheme={onToggleTheme}
-            currentTheme={currentTheme}
-          />
-        )}
-        {headerType === "HeaderUser" && <HeaderUser />}
-        {headerType === "HeaderNoSearch" && <HeaderNoSearch />}
+        <HeaderPro
+          isAdmin={isAdmin}
+          onToggleTheme={onToggleTheme}
+          currentTheme={currentTheme}
+          onTabChange={handleTabChange}
+          activeTab={activeTab}
+          onToggleAdmin={handleToggleAdmin}
+        />
       </Layout>
 
       <Layout direction="row" className="FiltersAndContent">

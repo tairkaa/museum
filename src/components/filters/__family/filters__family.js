@@ -1,12 +1,11 @@
-import { useState } from "react";
+import { Layout } from "@consta/uikit/Layout";
 import { Navbar } from "@consta/header/Navbar";
 import { Text } from "@consta/uikit/Text";
-import "./FilterFamily.css";
+import "./filters__family.css";
+import "./_disabled/filters__family_disabled.css";
 import React from "react";
 
-export const FilterFamily = () => {
-  const [selectedFamily, setSelectedFamily] = useState(null);
-
+export const FiltersFamily = ({ isDisabled = true }) => {
   const families = [
     {
       label: "1-е поколение",
@@ -78,20 +77,24 @@ export const FilterFamily = () => {
   const getItemSubMenu = (item) => item.subMenu;
   const onItemClick = (item) => {
     if (item.value) {
-      setSelectedFamily(item);
       console.log("Выбрано семейство:", item.label);
     }
   };
 
   return (
-    <div className="mainFilterFamilyBlock">
-      <div className="familyFilterHeader">
+    <Layout
+      flex={1}
+      className={`filters__family ${
+        isDisabled ? "filters__family_disabled" : ""
+      }`}
+    >
+      <div className="filterFamilyHeader">
         <Text size="xs" view="secondary">
           СЕМЕЙСТВА
         </Text>
       </div>
 
-      <div className="familyFilterContent">
+      <div className="filterFamilyContent">
         <Navbar
           items={families}
           groups={[]}
@@ -102,6 +105,6 @@ export const FilterFamily = () => {
           form="brick"
         />
       </div>
-    </div>
+    </Layout>
   );
 };

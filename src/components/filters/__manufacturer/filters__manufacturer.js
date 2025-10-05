@@ -1,11 +1,9 @@
-import { useState } from "react";
+import { Layout } from "@consta/uikit/Layout";
 import { Navbar } from "@consta/header/Navbar";
 import { Text } from "@consta/uikit/Text";
-import "./FilterManufacturer.css";
+import "./filters__manufacturer.css";
 
-export const FilterManufacturer = () => {
-  const [selectedManufacturer, setSelectedManufacturer] = useState(null);
-
+export const FiltersManufacturer = ({ onManufacturerChange }) => {
   const manufacturers = [
     { label: "Intel", value: "intel", groupId: "manufacturers" },
     { label: "AMD", value: "amd", groupId: "manufacturers" },
@@ -17,19 +15,19 @@ export const FilterManufacturer = () => {
   const getItemLabel = (item) => item.label;
 
   const onItemClick = (item) => {
-    setSelectedManufacturer(item);
+    onManufacturerChange(item);
     console.log("Выбран производитель:", item.label);
   };
 
   return (
-    <div className="mainFilterManufacturerBlock">
-      <div className="manufacturerFilterHeader">
+    <Layout flex={1} className="filters__manufacturer">
+      <div className="filterManufacturerHeader">
         <Text size="xs" view="secondary">
           ПРОИЗВОДИТЕЛИ
         </Text>
       </div>
 
-      <div className="manufacturerFilterContent">
+      <div className="filterManufacturerContent">
         <Navbar
           items={manufacturers}
           groups={[]}
@@ -39,6 +37,6 @@ export const FilterManufacturer = () => {
           form="brick"
         />
       </div>
-    </div>
+    </Layout>
   );
 };

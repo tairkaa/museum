@@ -7,7 +7,6 @@ import "./Content.css";
 
 export const Content = () => {
   let guid = "5816B197";
-  // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   return (
     <Layout className="MainContent">
@@ -43,9 +42,9 @@ export const Content = () => {
             padding: "10px",
           }}
         >
-          <CpuCard />
-          <CpuCard />
-          <CpuCard />
+          <CpuCard guid={guid} />
+          <CpuCard guid={guid} />
+          <CpuCard guid={guid} />
         </Layout>
       </Layout>
     </Layout>

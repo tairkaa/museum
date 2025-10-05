@@ -1,18 +1,19 @@
-import { Layout } from "@consta/uikit/Layout";
-import { FilterManufacturer } from "../filterManufacturer/FilterManufacturer";
-import { FilterFamily } from "../filterFamily/FilterFamily";
+import React, { useState } from "react";
 
-import "./Filters.css";
+import { FiltersManufacturer } from "./__manufacturer/filters__manufacturer";
+import { FiltersFamily } from "./__family/filters__family";
 
 export const Filters = () => {
+  const [selectedManufacturer, setSelectedManufacturer] = useState(null);
+
+  const handleManufacturerChange = (manufacturer) => {
+    setSelectedManufacturer(manufacturer);
+  };
+
   return (
     <>
-      <Layout flex={1} className="FilterManufacturerContainer">
-        <FilterManufacturer />
-      </Layout>
-      <Layout flex={1} className="FilterFamilyContainer">
-        <FilterFamily />
-      </Layout>
+      <FiltersManufacturer onManufacturerChange={handleManufacturerChange} />
+      <FiltersFamily isDisabled={!selectedManufacturer} />
     </>
   );
 };
