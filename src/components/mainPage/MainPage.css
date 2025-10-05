@@ -1,4 +1,7 @@
+.MainPage {
+  height: 100vh;
+}
+
 .FiltersAndContent {
-  flex: 1;
   overflow: hidden;
 }
