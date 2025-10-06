@@ -1,19 +1,20 @@
-.filters__family {
+.filters__manufacturer {
   height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  /* border: 1px solid var(--color-bg-border); */
 }
 
-.filterFamilyHeader {
+.filterManufacturerHeader {
   padding: 10px;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-system);
   border-bottom: 1px solid var(--color-bg-border);
   border-right: 1px solid var(--color-bg-border);
 }
 
-.filterFamilyContent {
-  background-color: var(--color-bg-secondary);
+.filterManufacturerContent {
+  background-color: var(--color-bg-system);
   flex: 1;
   overflow: auto;
   padding: 10px;

@@ -1,0 +1,10 @@
+.content-header__statistics {
+  display: flex;
+  width: 100%;
+}
+
+.content-header__statistics-item {
+  flex: 1;
+  border: 1px solid var(--color-bg-border);
+  padding: 20px;
+}

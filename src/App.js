@@ -5,7 +5,7 @@ import {
   presetGpnDefault,
   presetGpnDisplay,
 } from "@consta/uikit/Theme";
-import { MainPage } from "./components/mainPage/MainPage";
+import { MainPage } from "./components/main-page/main-page";
 
 const themes = {
   display: presetGpnDisplay,
