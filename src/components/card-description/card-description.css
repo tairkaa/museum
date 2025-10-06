@@ -1,0 +1,19 @@
+.card-description {
+  flex: 1;
+}
+
+.card-description__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-bg-border);
+}
+
+.card-description__label {
+  font-weight: 500;
+}
+
+.card-description__value {
+  text-align: right;
+  max-width: 60%;
+}

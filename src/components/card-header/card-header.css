@@ -1,0 +1,9 @@
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-bg-border);
+  border-radius: 0;
+}

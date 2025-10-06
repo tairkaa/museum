@@ -1,11 +1,11 @@
 import React from "react";
 import { Stats } from "@consta/widgets/Stats";
-import "./Statistics.css";
+import "./content-header__statistics.css";
 
-export const Statistics = () => {
+export const ContentHeaderStatistics = () => {
   return (
-    <div className="statisticsContainer">
-      <div className="statisticsItem">
+    <div className="content-header__statistics">
+      <div className="content-header__statistics-item">
         <Stats
           value={1247}
           title="Всего процессоров"
@@ -18,7 +18,7 @@ export const Statistics = () => {
         />
       </div>
 
-      <div className="statisticsItem">
+      <div className="content-header__statistics-item">
         <Stats
           value={1156}
           title="Рабочих"
@@ -31,7 +31,7 @@ export const Statistics = () => {
         />
       </div>
 
-      <div className="statisticsItem">
+      <div className="content-header__statistics-item">
         <Stats
           value={91}
           title="Дублей"

@@ -1,0 +1,8 @@
+.content-header__filters {
+  display: flex;
+  gap: 10px;
+}
+
+.content-header__filters-combobox {
+  width: 200px;
+}

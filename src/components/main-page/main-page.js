@@ -1,9 +1,10 @@
 import { Layout } from "@consta/uikit/Layout";
-import { HeaderPro } from "../header/Header";
-import { Content } from "../content/Content";
+import { HeaderPro } from "../header/header";
+import { CpuTab } from "../cpu-tab/cpu-tab";
+import { MbTab } from "../mb-tab/mb-tab";
+import { MemTab } from "../mem-tab/mem-tab";
 import { useState } from "react";
-import { Filters } from "../filters/Filters";
-import "./MainPage.css";
+import "./main-page.css";
 
 export function MainPage({ onToggleTheme, currentTheme }) {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -15,6 +16,19 @@ export function MainPage({ onToggleTheme, currentTheme }) {
 
   const handleToggleAdmin = () => {
     setIsAdmin(!isAdmin);
+  };
+
+  const renderPageContent = () => {
+    switch (activeTab) {
+      case "Процессоры":
+        return <CpuTab />;
+      case "Материнские платы":
+        return <MbTab />;
+      case "Устройства хранения":
+        return <MemTab />;
+      default:
+        return <CpuTab />;
+    }
   };
 
   return (
@@ -30,10 +44,7 @@ export function MainPage({ onToggleTheme, currentTheme }) {
         />
       </Layout>
 
-      <Layout direction="row" className="FiltersAndContent">
-        <Filters />
-        <Content />
-      </Layout>
+      {renderPageContent()}
     </Layout>
   );
 }
