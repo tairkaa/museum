@@ -1,11 +1,22 @@
 import React from "react";
 import { Button } from "@consta/uikit/Button";
+import { useNavigate } from "react-router-dom";
 
 import "./header__buttons.css";
 import "./_admin/header__buttons_admin.css";
 import "./_user/header__buttons_user.css";
 
 export function HeaderButtons({ isAdmin }) {
+  const navigate = useNavigate();
+
+  const handleImportCsv = () => {
+    navigate("/importcsv");
+  };
+
+  const handleImportPhoto = () => {
+    navigate("/addphoto");
+  };
+
   return (
     <div
       className={`header__buttons ${
@@ -14,8 +25,20 @@ export function HeaderButtons({ isAdmin }) {
     >
       {isAdmin && (
         <>
-          <Button label="Импорт CSV" view="ghost" size="s" form="brick" />
-          <Button label="Импорт фото" view="ghost" size="s" form="brick" />
+          <Button
+            label="Импорт CSV"
+            view="ghost"
+            size="s"
+            form="brick"
+            onClick={handleImportCsv}
+          />
+          <Button
+            label="Импорт фото"
+            view="ghost"
+            size="s"
+            form="brick"
+            onClick={handleImportPhoto}
+          />
           <Button label="Скачать таблицу" view="ghost" size="s" form="brick" />
         </>
       )}

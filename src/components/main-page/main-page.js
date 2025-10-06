@@ -3,21 +3,16 @@ import { HeaderPro } from "../header/header";
 import { CpuTab } from "../cpu-tab/cpu-tab";
 import { MbTab } from "../mb-tab/mb-tab";
 import { MemTab } from "../mem-tab/mem-tab";
-import { useState } from "react";
 import "./main-page.css";
 
-export function MainPage({ onToggleTheme, currentTheme }) {
-  const [isAdmin, setIsAdmin] = useState(false);
-  const [activeTab, setActiveTab] = useState("Процессоры");
-
-  const handleTabChange = (newTab) => {
-    setActiveTab(newTab);
-  };
-
-  const handleToggleAdmin = () => {
-    setIsAdmin(!isAdmin);
-  };
-
+export function MainPage({
+  onToggleTheme,
+  currentTheme,
+  isAdmin,
+  activeTab,
+  onTabChange,
+  onToggleAdmin,
+}) {
   const renderPageContent = () => {
     switch (activeTab) {
       case "Процессоры":
@@ -38,9 +33,9 @@ export function MainPage({ onToggleTheme, currentTheme }) {
           isAdmin={isAdmin}
           onToggleTheme={onToggleTheme}
           currentTheme={currentTheme}
-          onTabChange={handleTabChange}
+          onTabChange={onTabChange}
           activeTab={activeTab}
-          onToggleAdmin={handleToggleAdmin}
+          onToggleAdmin={onToggleAdmin}
         />
       </Layout>
 
