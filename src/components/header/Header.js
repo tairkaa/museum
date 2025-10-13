@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Layout } from "@consta/header/Layout";
 
-import { HeaderTopheader } from "./__topheader/header__topheader";
-import { HeaderTabs } from "./__tabs/header__tabs";
-import { HeaderSearch } from "./__search/header__search";
-import { HeaderButtons } from "./__buttons/header__buttons";
+import { HeaderTopheader } from "./-TopHeader/Header-TopHeader";
+import { HeaderTabs } from "./-Tabs/Header-Tabs";
+import { HeaderSearch } from "./-Search/Header-Search";
+import { HeaderButtons } from "./-Buttons/Header-Buttons";
 
-import "./header.css";
+import "./Header.css";
 
 export function HeaderPro({
   isAdmin,

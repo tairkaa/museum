@@ -1,10 +1,10 @@
 import { Card } from "@consta/uikit/Card";
 import { Layout } from "@consta/uikit/Layout";
-import { CardHeader } from "../card-header/card-header";
-import { CardPictures } from "../card-pictures/card-pictures";
-import { CardDescription } from "../card-description/card-description";
-import "./card.css";
-import "./__content/card__content.css";
+import { CardHeader } from "../CardHeader/CardHeader";
+import { CardPictures } from "../CardPictures/CardPictures";
+import { CardDescription } from "../CardDescription/CardDescription";
+import "./Card.css";
+import "./-Content/Card-Content.css";
 
 export const CardComponent = ({ guid, cpuData }) => {
   const defaultCpuData = {

@@ -1,8 +1,8 @@
 import { Layout } from "@consta/uikit/Layout";
-import { ContentHeader } from "../content-header/content-header";
-import { CardComponent } from "../card/card";
-import "./content.css";
-import "./__cards/content__cards.css";
+import { ContentHeader } from "../ContentHeader/ContentHeader";
+import { CardComponent } from "../Card/Card";
+import "./Content.css";
+import "./-Cards/Content-Cards.css";
 
 export const Content = () => {
   let guid = "5816B197";

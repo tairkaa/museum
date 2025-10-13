@@ -1,0 +1,12 @@
+.modal__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modal__image {
+  height: 70vh;
+  width: auto;
+  object-fit: contain;
+}
