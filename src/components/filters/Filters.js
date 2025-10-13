@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import { FiltersManufacturer } from "./__manufacturer/filters__manufacturer";
-import { FiltersFamily } from "./__family/filters__family";
+import { FiltersManufacturer } from "./-Manufacturer/Filters-Manufacturer";
+import { FiltersFamily } from "./-Family/Filters-Family";
 
 export const Filters = () => {
   const [selectedManufacturer, setSelectedManufacturer] = useState(null);

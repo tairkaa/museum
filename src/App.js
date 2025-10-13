@@ -6,9 +6,9 @@ import {
   presetGpnDefault,
   presetGpnDisplay,
 } from "@consta/uikit/Theme";
-import { MainPage } from "./components/main-page/main-page";
-import { AddPhotoPage } from "./components/add-photo-page/add-photo-page";
-import { ImportCsvPage } from "./components/import-csv-page/import-csv-page";
+import { MainPage } from "./components/MainPage/MainPage";
+import { AddPhotoPage } from "./components/AddPhotoPage/AddPhotoPage";
+import { ImportCsvPage } from "./components/ImportCsvPage/ImportCsvPage";
 
 const themes = {
   display: presetGpnDisplay,
