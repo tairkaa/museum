@@ -15,6 +15,7 @@ export function HeaderPro({
   onTabChange,
   activeTab = "Процессоры",
   onToggleAdmin,
+  onGoHome,
 }) {
   const [searchValue, setSearchValue] = useState(null);
 
@@ -25,6 +26,7 @@ export function HeaderPro({
         onToggleTheme={onToggleTheme}
         currentTheme={currentTheme}
         onToggleAdmin={onToggleAdmin}
+        onGoHome={onGoHome}
       />
 
       <Layout

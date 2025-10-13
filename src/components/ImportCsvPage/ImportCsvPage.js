@@ -11,6 +11,7 @@ export function ImportCsvPage({
   activeTab,
   onTabChange,
   onToggleAdmin,
+  onGoHome,
 }) {
   const navigate = useNavigate();
 
@@ -28,6 +29,7 @@ export function ImportCsvPage({
           onTabChange={onTabChange}
           activeTab={activeTab}
           onToggleAdmin={onToggleAdmin}
+          onGoHome={onGoHome}
         />
       </Layout>
 

@@ -19,7 +19,7 @@ const themes = {
 const App = () => {
   const [theme, setTheme] = useState("default");
   const [isAdmin, setIsAdmin] = useState(false);
-  const [activeTab, setActiveTab] = useState("Процессоры");
+  const [activeTab, setActiveTab] = useState(null);
 
   const toggleTheme = () => {
     setTheme((prev) =>
@@ -33,6 +33,10 @@ const App = () => {
 
   const handleToggleAdmin = () => {
     setIsAdmin(!isAdmin);
+  };
+
+  const handleGoHome = () => {
+    setActiveTab(null);
   };
 
   return (
@@ -49,6 +53,7 @@ const App = () => {
                 activeTab={activeTab}
                 onTabChange={handleTabChange}
                 onToggleAdmin={handleToggleAdmin}
+                onGoHome={handleGoHome}
               />
             }
           />
@@ -62,6 +67,7 @@ const App = () => {
                 activeTab={activeTab}
                 onTabChange={handleTabChange}
                 onToggleAdmin={handleToggleAdmin}
+                onGoHome={handleGoHome}
               />
             }
           />
@@ -75,6 +81,7 @@ const App = () => {
                 activeTab={activeTab}
                 onTabChange={handleTabChange}
                 onToggleAdmin={handleToggleAdmin}
+                onGoHome={handleGoHome}
               />
             }
           />

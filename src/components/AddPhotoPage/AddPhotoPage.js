@@ -11,6 +11,7 @@ export function AddPhotoPage({
   activeTab,
   onTabChange,
   onToggleAdmin,
+  onGoHome,
 }) {
   const navigate = useNavigate();
 
@@ -28,6 +29,7 @@ export function AddPhotoPage({
           onTabChange={onTabChange}
           activeTab={activeTab}
           onToggleAdmin={onToggleAdmin}
+          onGoHome={onGoHome}
         />
       </Layout>
 

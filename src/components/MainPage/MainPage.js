@@ -3,6 +3,7 @@ import { HeaderPro } from "../Header/Header";
 import { CpuTab } from "../CpuTab/CpuTab";
 import { MbTab } from "../MbTab/MbTab";
 import { MemTab } from "../MemTab/MemTab";
+import { HomePage } from "../HomePage/HomePage";
 import "./MainPage.css";
 
 export function MainPage({
@@ -12,6 +13,7 @@ export function MainPage({
   activeTab,
   onTabChange,
   onToggleAdmin,
+  onGoHome,
 }) {
   const renderPageContent = () => {
     switch (activeTab) {
@@ -21,8 +23,11 @@ export function MainPage({
         return <MbTab />;
       case "Устройства хранения":
         return <MemTab />;
+      case null:
+      case "Home":
+        return <HomePage />;
       default:
-        return <CpuTab />;
+        return <HomePage />;
     }
   };
 
@@ -36,6 +41,7 @@ export function MainPage({
           onTabChange={onTabChange}
           activeTab={activeTab}
           onToggleAdmin={onToggleAdmin}
+          onGoHome={onGoHome}
         />
       </Layout>
       {renderPageContent()}
